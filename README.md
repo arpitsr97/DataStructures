@@ -1,2 +1,2 @@
 # DataStructures
-These are the problems from dataq structures
+These are the problems from data structures
