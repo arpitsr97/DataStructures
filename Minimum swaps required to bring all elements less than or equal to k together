@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main(void) {
+	// your code goes here
+	int n, i, k, a[100], rl;
+	scanf("%d",&k);
+	scanf("%d",&n);
+	for(i=0;i<n;i++){
+	    scanf("%d",&a[i]);
+	}
+	for(i=n-1;i>=0;i--){
+	    if(a[i]<k){
+	        rl++;
+	    }
+	    
+	    else
+	    break;
+	}
+	printf("%d",rl+1);
+	return 0;
+}
