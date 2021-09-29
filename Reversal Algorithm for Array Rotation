@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+void rotate(int a[],int d, int n){
+    if(d==0)
+        return;
+    if(d>n)
+        d=d%n;
+    reverse(a,0,d-1);
+    reverse(a,d,n-1);
+    reverse(a,0,n-1);
+}
+
+void reverse(int a[],int i, int j){
+    int k;
+    while(i<j){
+        k=a[i];
+        a[i]=a[j];
+        a[j]=k;
+        i++;
+        j--;
+    }
+}
+int main(void) {
+	// your code goes here
+	int n,i,j,s,a[100];
+	scanf("%d",&n);
+	for(i=0;i<n;i++){
+	    scanf("%d",&a[i]);
+	}
+	scanf("%d",&s);
+	rotate(a,s,n);
+    for(i=0;i<n;i++){
+        printf("%d\n",a[i]);
+    }
+}
+
