@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main(void) {
+	int a[100], n, i, x, y, xi, yi;
+	scanf("%d",&n);
+	for(i=0;i<n;i++){
+	    scanf("%d",&a[i]);
+	}
+	
+	scanf("%d",&x);
+	scanf("%d",&y);
+	xi=0;
+	yi=0;
+	for(i=0;i<n;i++){
+	    if(a[i]==x){
+	        xi=i;
+	    }
+	    if(a[i]==y){
+	        yi=i;
+	    }
+	    if(xi!=0 && yi!=0){
+	        diff = abs(xi-yi);
+	    }
+	}
+	
+	printf("%d",max_so_far);
+	return 0;
+}
